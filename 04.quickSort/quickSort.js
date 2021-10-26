@@ -12,7 +12,7 @@ const quickSort = (arr) => {
       greater.push(arr[i]);
     }
   }
-  return quickSort(less).concat(pivot, quickSort(greater));
+  return [...quickSort(less), pivot, ...quickSort(greater)];
 };
 
 const testArray = [123, 2, 332, 44, 5, 65, 7, 8555, 9];
